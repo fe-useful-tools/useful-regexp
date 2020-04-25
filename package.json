@@ -1,0 +1,103 @@
+{
+  "name": "useful-regexp",
+  "version": "1.0.0",
+  "description": "Useful regex patterns and functions for easier programming",
+  "main": "lib/index.esm.js",
+  "commonjs": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "browser": "lib/index.min.js",
+  "types": "lib/types/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "rm -fr ./lib ./docs && npm run type-check && npm run build:types && npm run build:umd && npm run build:doc",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "cross-env BABEL_ENV=build babel src --out-dir lib --extensions \".ts\"",
+    "build:umd": "rollup -c",
+    "build:doc": "npm run doc && npm run test  && npm run size",
+    "doc": "typedoc --mode file --theme minimal",
+    "lint": "./node_modules/.bin/eslint src/**/*.ts",
+    "prettier": "prettier --write \"README.md\"",
+    "size": "size-limit && gzip-size lib/index.min.js",
+    "pub": "sh release.sh"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "size-limit": [
+    {
+      "limit": "10 KB",
+      "path": "lib/index.min.js"
+    }
+  ],
+  "release": {
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog"
+      },
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ]
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe-useful-tools/useful-regexp.git"
+  },
+  "keywords": [
+    "regex"
+  ],
+  "author": "kingmui<muikinghk@yahoo.com.hk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fe-useful-tools/useful-regexp/issues"
+  },
+  "homepage": "https://fe-useful-tools.github.io/useful-regexp/",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@size-limit/preset-big-lib": "^4.4.5",
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^25.4.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "codecov": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "gzip-size-cli": "^3.0.0",
+    "jest": "^25.4.0",
+    "lodash": "^4.17.15",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.0.5",
+    "rollup": "^2.7.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "size-limit": "^4.4.5",
+    "ts-jest": "^25.4.0",
+    "typedoc": "^0.17.4",
+    "typescript": "^3.8.3"
+  }
+}
