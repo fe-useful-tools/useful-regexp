@@ -2840,6 +2840,9 @@ img {
 			<a href="globals.html#mobile_all" class="tsd-kind-icon">MOBILE_<wbr>ALL</a>
 		</li>
 		<li class=" tsd-kind-variable">
+			<a href="globals.html#mobile_broadcast_network" class="tsd-kind-icon">MOBILE_<wbr>BROADCAST_<wbr>NETWORK</a>
+		</li>
+		<li class=" tsd-kind-variable">
 			<a href="globals.html#mobile_cmcc" class="tsd-kind-icon">MOBILE_<wbr>CMCC</a>
 		</li>
 		<li class=" tsd-kind-variable">
@@ -3006,6 +3009,9 @@ img {
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#ischinamobileall" class="tsd-kind-icon">is<wbr>China<wbr>Mobile<wbr>All</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#ischinamobilebroadcastnetwork" class="tsd-kind-icon">is<wbr>China<wbr>Mobile<wbr>Broadcast<wbr>Network</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#ischinamobilecmcc" class="tsd-kind-icon">is<wbr>China<wbr>MobileCMCC</a>
@@ -3259,7 +3265,7 @@ img {
 				<img alt="NPM" src="https://img.shields.io/npm/l/useful-regexp?style=flat-square">
 				<img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/fe-useful-tools/useful-regexp?style=flat-square">
 				<img alt="Travis (.org)" src="https://img.shields.io/travis/fe-useful-tools/useful-regexp?style=flat-square">
-				<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/fe-useful-tools/useful-regexp?style=flat-square">
+				<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/fe-useful-tools/useful-regexp?style=flat-square&colorB=51C838">
 				<img alt="npm" src="https://img.shields.io/npm/dt/useful-regexp?style=flat-square">
 				<img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/useful-regexp?style=flat-square">
 			</p>
@@ -3267,25 +3273,44 @@ img {
 				<h1>useful-regexp</h1>
 			</a>
 			<p>Useful regex patterns and functions  for easier programming.</p>
-			<a href="#documentation-clipboard" id="documentation-clipboard" style="color: inherit; text-decoration: none;">
-				<h4><a href="https://fe-useful-tools.github.io/useful-regexp/">Documentation :clipboard:</a></h4>
+			<p>The repository is a derivative library of the following projects, designed to provide an API out of the box.</p>
+			<p><a href="https://github.com/VincentSit/ChinaMobilePhoneNumberRegex">ChinaMobilePhoneNumberRegex</a></p>
+			<p><a href="https://github.com/any86/any-rule">any-rule</a></p>
+			<a href="#wrench-getting-started" id="wrench-getting-started" style="color: inherit; text-decoration: none;">
+				<h2>:wrench: Getting Started</h2>
 			</a>
+			<a href="#card_file_box-documentation" id="card_file_box-documentation" style="color: inherit; text-decoration: none;">
+				<h3>:card_file_box: Documentation</h3>
+			</a>
+			<p>You can find for more details, API on <a href="https://fe-useful-tools.github.io/useful-regexp/">📚 Documentation</a>.</p>
 			<a href="#package-install" id="package-install" style="color: inherit; text-decoration: none;">
 				<h2>:package: Install</h2>
 			</a>
+			<p>useful-regexp was designed to work both in the browser and in Node.js.</p>
+			<a href="#nodejs" id="nodejs" style="color: inherit; text-decoration: none;">
+				<h3>Node.js</h3>
+			</a>
+			<p>To get started with useful-regexp in your Node.js project, simply add the dependency with NPM.</p>
+			<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> npm install useful-regexp --save</span></code></pre>
+			<p>Then include it in your script:</p>
+			<pre><code class="language-javascript"><span class="hljs-keyword">const</span> regexp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'useful-regexp'</span>);
+<span class="hljs-comment">// import * as regexp from 'useful-regexp' // ES 2015</span>
+<span class="hljs-built_in">console</span>.log(regexp.isEmail(<span class="hljs-string">'muikinghk@yahoo.com.hk'</span>));</code></pre>
+			<a href="#browser" id="browser" style="color: inherit; text-decoration: none;">
+				<h3>Browser</h3>
+			</a>
+			<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"lib/useful-regexp/index.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+  usefulRegexp.isTel(<span class="hljs-string">'0341-86091234'</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+			<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
+				<h3>Typescript</h3>
+			</a>
+			<p>useful-regexp ships with official type declarations for TypeScript in NPM package out of the box.</p>
 			<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> yarn add useful-regexp</span>
 <span class="hljs-meta">#</span><span class="bash"> or</span>
 <span class="hljs-meta">$</span><span class="bash"> npm install --save useful-regexp</span></code></pre>
-			<a href="#clipboard-usage" id="clipboard-usage" style="color: inherit; text-decoration: none;">
-				<h2>:clipboard: Usage</h2>
-			</a>
-			<a href="#importing" id="importing" style="color: inherit; text-decoration: none;">
-				<h3>Importing</h3>
-			</a>
-			<pre><code class="language-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> regexp <span class="hljs-keyword">from</span> <span class="hljs-string">'useful-regexp'</span>;</code></pre>
-			<a href="#syntax" id="syntax" style="color: inherit; text-decoration: none;">
-				<h3>Syntax</h3>
-			</a>
+			<p>Import and use in your Typescript file</p>
 			<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { isChineseName } <span class="hljs-keyword">from</span> <span class="hljs-string">'useful-regexp'</span>;
 
 <span class="hljs-keyword">const</span> name = <span class="hljs-string">'喜塔腊·尔晴'</span>;
@@ -3339,6 +3364,7 @@ img {
 							<li class="tsd-kind-variable"><a href="globals.html#magnet_link" class="tsd-kind-icon">MAGNET_<wbr>LINK</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#md5_format" class="tsd-kind-icon">MD5_<wbr>FORMAT</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#mobile_all" class="tsd-kind-icon">MOBILE_<wbr>ALL</a></li>
+							<li class="tsd-kind-variable"><a href="globals.html#mobile_broadcast_network" class="tsd-kind-icon">MOBILE_<wbr>BROADCAST_<wbr>NETWORK</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#mobile_cmcc" class="tsd-kind-icon">MOBILE_<wbr>CMCC</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#mobile_ctcc" class="tsd-kind-icon">MOBILE_<wbr>CTCC</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#mobile_cucc" class="tsd-kind-icon">MOBILE_<wbr>CUCC</a></li>
@@ -3400,6 +3426,7 @@ img {
 							<li class="tsd-kind-function"><a href="globals.html#isbase64" class="tsd-kind-icon">is<wbr>Base64</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#iscapitalenglishalphabet" class="tsd-kind-icon">is<wbr>Capital<wbr>English<wbr>Alphabet</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#ischinamobileall" class="tsd-kind-icon">is<wbr>China<wbr>Mobile<wbr>All</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#ischinamobilebroadcastnetwork" class="tsd-kind-icon">is<wbr>China<wbr>Mobile<wbr>Broadcast<wbr>Network</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#ischinamobilecmcc" class="tsd-kind-icon">is<wbr>China<wbr>MobileCMCC</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#ischinamobilectcc" class="tsd-kind-icon">is<wbr>China<wbr>MobileCTCC</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#ischinamobilecucc" class="tsd-kind-icon">is<wbr>China<wbr>MobileCUCC</a></li>
@@ -3493,7 +3520,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ACCOUNT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-zA-Z]\w{4,15}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L151">regexp/common.ts:151</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L155">regexp/common.ts:155</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3508,7 +3535,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ALPHABET_<wbr>AND_<wbr>NUMBER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[A-Za-z0-9]+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L163">regexp/common.ts:163</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L167">regexp/common.ts:167</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3523,7 +3550,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">A_<wbr>SHARE_<wbr>STOCK_<wbr>CODE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(s[hz]|S[HZ])(000[\d]{3}|002[\d]{3}|300[\d]{3}|600[\d]{3}|60[\d]{4})$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L76">regexp/common.ts:76</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L80">regexp/common.ts:80</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3538,7 +3565,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">BANK_<wbr>CARD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[1-9]\d{9,29}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L115">regexp/common.ts:115</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L119">regexp/common.ts:119</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3553,7 +3580,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">BASE64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+&#x3D;[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&amp;&#x27;,()*+;&#x3D;\-._~:@/?%\s]*?)\s*$/i</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L106">regexp/common.ts:106</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L110">regexp/common.ts:110</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3568,7 +3595,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">CAPITAL_<wbr>ENGLISH_<wbr>ALPHABET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[A-Z]+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L175">regexp/common.ts:175</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L179">regexp/common.ts:179</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3583,7 +3610,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">CHINESE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L154">regexp/common.ts:154</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L158">regexp/common.ts:158</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3598,7 +3625,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">CHINESE_<wbr>AND_<wbr>NUMBER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^((?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])|(\d))+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L166">regexp/common.ts:166</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L170">regexp/common.ts:170</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3613,7 +3640,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">CHINESE_<wbr>NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:[\u4e00-\u9fa5·]{2,16})$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L118">regexp/common.ts:118</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L122">regexp/common.ts:122</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3628,7 +3655,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">CURRENCY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(?:^[1-9]([0-9]+)?(?:\.[0-9]{1,2})?$)|(?:^(?:0){1}$)|(?:^[0-9]\.[0-9](?:[0-9])?$)/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L112">regexp/common.ts:112</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L116">regexp/common.ts:116</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3643,7 +3670,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">CURRENCY_<wbr>SEPARATOR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^-?\d+(,\d{3})*(\.\d{1,2})?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L109">regexp/common.ts:109</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L113">regexp/common.ts:113</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3658,7 +3685,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">DATE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d{4}(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L133">regexp/common.ts:133</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L137">regexp/common.ts:137</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3673,7 +3700,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">DECIMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[-]?\d+\.\d+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L20">regexp/common.ts:20</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L24">regexp/common.ts:24</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3688,7 +3715,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ED2<wbr>K_<wbr>LINK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^ed2k:\/\/\|file\|.+\|\/$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L52">regexp/common.ts:52</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L56">regexp/common.ts:56</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3703,7 +3730,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">EMAIL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L2">regexp/common.ts:2</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L6">regexp/common.ts:6</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3718,7 +3745,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ENGLISH_<wbr>ALPHABET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-zA-Z]+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L169">regexp/common.ts:169</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L173">regexp/common.ts:173</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3733,7 +3760,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ENGLISH_<wbr>NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(^[a-zA-Z]{1}[a-zA-Z\s]{0,20}[a-zA-Z]{1}$)/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L121">regexp/common.ts:121</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L125">regexp/common.ts:125</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3748,7 +3775,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">FILE_<wbr>FOLDER_<wbr>PATH_<wbr>LINUX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\/(?:[^/]+\/)*$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L64">regexp/common.ts:64</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L68">regexp/common.ts:68</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3763,7 +3790,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">FILE_<wbr>FOLDER_<wbr>PATH_<wbr>WINDOWS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-zA-Z]:\\(?:\w+\\?)*$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L70">regexp/common.ts:70</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L74">regexp/common.ts:74</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3778,7 +3805,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">FILE_<wbr>PATH_<wbr>LINUX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\/(?:[^/]+\/)*[^/]+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L67">regexp/common.ts:67</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L71">regexp/common.ts:71</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3793,7 +3820,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">FILE_<wbr>PATH_<wbr>WINDOWS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-zA-Z]:\\(?:\w+\\)*\w+\.\w+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L73">regexp/common.ts:73</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L77">regexp/common.ts:77</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3808,7 +3835,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">HEX_<wbr>COLOR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L190">regexp/common.ts:190</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L194">regexp/common.ts:194</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3823,7 +3850,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">HIDDEN_<wbr>FILE_<wbr>PATH_<wbr>LINUX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\/(?:[^/]+\/)*\.[^/]*/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L61">regexp/common.ts:61</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L65">regexp/common.ts:65</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3838,7 +3865,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">HTML_<wbr>COMMENTS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;!--[\s\S]*?--&gt;$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L82">regexp/common.ts:82</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L86">regexp/common.ts:86</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3853,7 +3880,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">HTML_<wbr>TAG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;(\w+)[^&gt;]*&gt;(.*?&lt;\/\1&gt;)?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L85">regexp/common.ts:85</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L89">regexp/common.ts:89</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3868,7 +3895,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ID_<wbr>CARD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L145">regexp/common.ts:145</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L149">regexp/common.ts:149</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3883,7 +3910,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ID_<wbr>CARD_<wbr>1G<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[1-9]\d{7}(?:0\d|10|11|12)(?:0[1-9]|[1-2][\d]|30|31)\d{3}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L139">regexp/common.ts:139</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L143">regexp/common.ts:143</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3898,7 +3925,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">ID_<wbr>CARD_<wbr>2G<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[1-9]\d{5}(?:18|19|20)\d{2}(?:0\d|10|11|12)(?:0[1-9]|[1-2]\d|30|31)\d{3}[\dXx]$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L142">regexp/common.ts:142</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L146">regexp/common.ts:146</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3913,7 +3940,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">IMAGE_<wbr>LINK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^https?:\/\/(.+\/)+.+(\.(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif))$/i</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L97">regexp/common.ts:97</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L101">regexp/common.ts:101</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3928,7 +3955,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">INTEGER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[-]?\d+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L11">regexp/common.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L15">regexp/common.ts:15</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3943,7 +3970,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">INTEGER_<wbr>OR_<wbr>DECIMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[-]?\d+([.]{1}\d+)?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L29">regexp/common.ts:29</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L33">regexp/common.ts:33</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3958,7 +3985,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">IPV4<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L184">regexp/common.ts:184</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L188">regexp/common.ts:188</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3973,7 +4000,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">IPV6<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}:([0-9A-Fa-f]{1,4}:)?[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){4}:([0-9A-Fa-f]{1,4}:){0,2}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){3}:([0-9A-Fa-f]{1,4}:){0,3}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){2}:([0-9A-Fa-f]{1,4}:){0,4}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|(([0-9A-Fa-f]{1,4}:){0,5}:((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|(::([0-9A-Fa-f]{1,4}:){0,5}((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|([0-9A-Fa-f]{1,4}::([0-9A-Fa-f]{1,4}:){0,5}[0-9A-Fa-f]{1,4})|(::([0-9A-Fa-f]{1,4}:){0,6}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){1,7}:))$/i</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L187">regexp/common.ts:187</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L191">regexp/common.ts:191</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3988,7 +4015,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">JAVA_<wbr>PACKAGE_<wbr>NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^([a-zA-Z_][a-zA-Z0-9_]*)+([.][a-zA-Z_][a-zA-Z0-9_]*)+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L199">regexp/common.ts:199</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L203">regexp/common.ts:203</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4003,7 +4030,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">LOWER_<wbr>CASE_<wbr>ENGLISH_<wbr>ALPHABET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-z]+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L172">regexp/common.ts:172</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L176">regexp/common.ts:176</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4018,7 +4045,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MAC_<wbr>ADDRESS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^((([a-f0-9]{2}:){5})|(([a-f0-9]{2}-){5}))[a-f0-9]{2}$/i</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L202">regexp/common.ts:202</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L206">regexp/common.ts:206</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4033,7 +4060,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MAGNET_<wbr>LINK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^magnet:\?xt&#x3D;urn:btih:[0-9a-fA-F]{40,}.*$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L55">regexp/common.ts:55</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L59">regexp/common.ts:59</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4048,7 +4075,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MD5_<wbr>FORMAT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^([a-f\d]{32}|[A-F\d]{32})$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L88">regexp/common.ts:88</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L92">regexp/common.ts:92</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4060,10 +4087,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="mobile_all" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>ALL</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3\d{3}|5[^4\D]\d{2}|8\d{3}|7(?:[0135-9]\d{2}|4(?:0\d|1[0-2]|9\d))|9[0135-9]\d{2}|6[2567]\d{2}|4(?:[14]0\d{3}|[68]\d{4}|[579]\d{2}))\d{6}$/</span></div>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3\d{3}|5[^4\D]\d{2}|8\d{3}|7(?:[0-35-9]\d{2}|4(?:0\d|1[0-2]|9\d))|9[0-35-9]\d{2}|6[2567]\d{2}|4(?:[14]0\d{3}|[68]\d{4}|[579]\d{2}))\d{6}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L3">regexp/chinaMobilePhoneNumber.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L5">regexp/chinaMobilePhoneNumber.ts:5</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4073,12 +4100,27 @@ img {
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
-				<a name="mobile_cmcc" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>CMCC</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>CMCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3(?:4[^9\D]|[5-9]\d)|5[^3-6\D]\d|8[23478]\d|[79]8\d)\d{7}$/</span></div>
+				<a name="mobile_broadcast_network" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>BROADCAST_<wbr>NETWORK</h3>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>BROADCAST_<wbr>NETWORK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?192\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L10">regexp/chinaMobilePhoneNumber.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L19">regexp/chinaMobilePhoneNumber.ts:19</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>匹配中国广电</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable">
+				<a name="mobile_cmcc" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>CMCC</h3>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>CMCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3(?:4[^9\D]|[5-9]\d)|5[^3-6\D]\d|7[28]\d|8[23478]\d|9[578]\d)\d{7}$/</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L12">regexp/chinaMobilePhoneNumber.ts:12</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4090,10 +4132,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="mobile_ctcc" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>CTCC</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>CTCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3(?:3\d|49)\d|53\d{2}|8[019]\d{2}|7(?:[37]\d{2}|40[0-5])|9[139]\d{2})\d{6}$/</span></div>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>CTCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3(?:3\d|49)\d|53\d{2}|8[019]\d{2}|7(?:[37]\d{2}|40[0-5])|9[0139]\d{2})\d{6}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L14">regexp/chinaMobilePhoneNumber.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L16">regexp/chinaMobilePhoneNumber.ts:16</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4105,10 +4147,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="mobile_cucc" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>CUCC</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>CUCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3[0-2]|[578][56]|66)\d{8}$/</span></div>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>CUCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3[0-2]|[578][56]|66|96)\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L12">regexp/chinaMobilePhoneNumber.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L14">regexp/chinaMobilePhoneNumber.ts:14</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4123,7 +4165,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>DATA_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?14[579]\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L40">regexp/chinaMobilePhoneNumber.ts:40</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L46">regexp/chinaMobilePhoneNumber.ts:46</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4138,7 +4180,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>DATA_<wbr>CMCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?147\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L42">regexp/chinaMobilePhoneNumber.ts:42</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L48">regexp/chinaMobilePhoneNumber.ts:48</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4153,7 +4195,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>DATA_<wbr>CTCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?149\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L46">regexp/chinaMobilePhoneNumber.ts:46</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L52">regexp/chinaMobilePhoneNumber.ts:52</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4168,7 +4210,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>DATA_<wbr>CUCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?145\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L44">regexp/chinaMobilePhoneNumber.ts:44</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L50">regexp/chinaMobilePhoneNumber.ts:50</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4183,7 +4225,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>INMARSAT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1749\d{7}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L17">regexp/chinaMobilePhoneNumber.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L22">regexp/chinaMobilePhoneNumber.ts:22</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4195,10 +4237,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="mobile_iot_all" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>IOT_<wbr>ALL</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>IOT_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?14(?:[14]0\d|[68]\d{2})\d{8}$/</span></div>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>IOT_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?14(?:[14]0|[68]\d)\d{9}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L31">regexp/chinaMobilePhoneNumber.ts:31</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L37">regexp/chinaMobilePhoneNumber.ts:37</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4213,7 +4255,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>IOT_<wbr>CMCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?14(?:40|8\d)\d{9}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L33">regexp/chinaMobilePhoneNumber.ts:33</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L39">regexp/chinaMobilePhoneNumber.ts:39</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4228,7 +4270,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>IOT_<wbr>CTCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1410\d{9}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L37">regexp/chinaMobilePhoneNumber.ts:37</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L43">regexp/chinaMobilePhoneNumber.ts:43</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4243,7 +4285,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>IOT_<wbr>CUCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?146\d{10}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L35">regexp/chinaMobilePhoneNumber.ts:35</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L41">regexp/chinaMobilePhoneNumber.ts:41</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4258,7 +4300,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>MIIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?174(?:0[6-9]|1[0-2])\d{6}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L19">regexp/chinaMobilePhoneNumber.ts:19</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L25">regexp/chinaMobilePhoneNumber.ts:25</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4273,7 +4315,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>MVNO_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:7[01]|6[257])\d{8}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L22">regexp/chinaMobilePhoneNumber.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L28">regexp/chinaMobilePhoneNumber.ts:28</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4288,7 +4330,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>MVNO_<wbr>CMCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:65\d|70[356])\d{7}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L24">regexp/chinaMobilePhoneNumber.ts:24</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L30">regexp/chinaMobilePhoneNumber.ts:30</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4303,7 +4345,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>MVNO_<wbr>CTCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:70[012]|62\d)\d{7}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L28">regexp/chinaMobilePhoneNumber.ts:28</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L34">regexp/chinaMobilePhoneNumber.ts:34</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4318,7 +4360,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>MVNO_<wbr>CUCC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:70[4789]|71\d|67\d)\d{7}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L26">regexp/chinaMobilePhoneNumber.ts:26</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L32">regexp/chinaMobilePhoneNumber.ts:32</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4330,10 +4372,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="mobile_phone_all" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>PHONE_<wbr>ALL</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>PHONE_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3\d{3}|5[^4\D]\d{2}|8\d{3}|7(?:[35-8]\d{2}|4(?:0\d|1[0-2]|9\d))|9[0135-9]\d{2}|66\d{2})\d{6}$/</span></div>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>PHONE_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3\d{3}|5[^4\D]\d{2}|8\d{3}|7(?:[235-8]\d{2}|4(?:0\d|1[0-2]|9\d))|9[0-35-9]\d{2}|66\d{2})\d{6}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L8">regexp/chinaMobilePhoneNumber.ts:8</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L10">regexp/chinaMobilePhoneNumber.ts:10</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4345,10 +4387,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="mobile_sms_all" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> MOBILE_<wbr>SMS_<wbr>ALL</h3>
-				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>SMS_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3\d{3}|5[^4\D]\d{2}|8\d{3}|7(?:[0135-9]\d{2}|4(?:0\d|1[0-2]|9\d))|9[0135-9]\d{2}|6[2567]\d{2}|4[579]\d{2})\d{6}$/</span></div>
+				<div class="tsd-signature tsd-kind-icon">MOBILE_<wbr>SMS_<wbr>ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\+?86)?1(?:3\d{3}|5[^4\D]\d{2}|8\d{3}|7(?:[0-35-9]\d{2}|4(?:0\d|1[0-2]|9\d))|9[0-35-9]\d{2}|6[2567]\d{2}|4[579]\d{2})\d{6}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/chinaMobilePhoneNumber.ts#L5">regexp/chinaMobilePhoneNumber.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/chinaMobilePhoneNumber.ts#L7">regexp/chinaMobilePhoneNumber.ts:7</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4363,7 +4405,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">NEGTIVE_<wbr>DECIMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^-{1}\d+\.\d+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L17">regexp/common.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L21">regexp/common.ts:21</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4378,7 +4420,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">NEGTIVE_<wbr>INTEGER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^-{1}\d+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L8">regexp/common.ts:8</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L12">regexp/common.ts:12</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4393,7 +4435,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">NEGTIVE_<wbr>INTEGER_<wbr>OR_<wbr>DECIMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^-{1}\d+([.]{1}\d+)?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L26">regexp/common.ts:26</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L30">regexp/common.ts:30</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4408,7 +4450,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">NEW_<wbr>ENERGY_<wbr>PLATE_<wbr>NUMBER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF][A-HJ-NP-Z0-9][0-9]{4}))$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L124">regexp/common.ts:124</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L128">regexp/common.ts:128</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4423,7 +4465,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">NON_<wbr>ALPHABET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[^A-Za-z]*$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L196">regexp/common.ts:196</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L200">regexp/common.ts:200</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4438,7 +4480,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">NON_<wbr>NEW_<wbr>ENERGY_<wbr>PLATE_<wbr>NUMBER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L127">regexp/common.ts:127</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L131">regexp/common.ts:131</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4453,7 +4495,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">PASSPORT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(^[EeKkGgDdSsPpHh]\d{8}$)|(^(([Ee][a-fA-F])|([DdSsPp][Ee])|([Kk][Jj])|([Mm][Aa])|(1[45]))\d{7}$)/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L148">regexp/common.ts:148</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L152">regexp/common.ts:152</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4468,7 +4510,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">PASSWORD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\S*(?&#x3D;\S{6,})(?&#x3D;\S*\d)(?&#x3D;\S*[A-Z])(?&#x3D;\S*[a-z])(?&#x3D;\S*[!@#$%^&amp;*? ])\S*$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L178">regexp/common.ts:178</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L182">regexp/common.ts:182</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4483,7 +4525,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">PHONE_<wbr>CODE_<wbr>IMEI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d{15,17}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L35">regexp/common.ts:35</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L39">regexp/common.ts:39</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4498,7 +4540,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">PLATE_<wbr>NUMBER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(?:(?:[0-9]{5}[DF])|(?:[DF](?:[A-HJ-NP-Z0-9])[0-9]{4})))|(?:[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9 挂学警港澳]{1})$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L130">regexp/common.ts:130</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L134">regexp/common.ts:134</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4513,7 +4555,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">POSITIVE_<wbr>DECIMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d+\.\d+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L14">regexp/common.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L18">regexp/common.ts:18</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4528,7 +4570,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">POSITIVE_<wbr>INTEGER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d+$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L5">regexp/common.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L9">regexp/common.ts:9</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4543,7 +4585,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">POSITIVE_<wbr>INTEGER_<wbr>OR_<wbr>DECIMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d+([.]{1}\d+)?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L23">regexp/common.ts:23</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L27">regexp/common.ts:27</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4558,7 +4600,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">POSTAL_<wbr>CODE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(0[1-7]|1[0-356]|2[0-7]|3[0-6]|4[0-7]|5[1-7]|6[1-7]|7[0-5]|8[013-6])\d{4}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L193">regexp/common.ts:193</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L197">regexp/common.ts:197</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4573,7 +4615,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">QQ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[1-9][0-9]{4,10}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L157">regexp/common.ts:157</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L161">regexp/common.ts:161</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4588,7 +4630,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">SCORE_<wbr>OF_<wbr>EXAMINATION_<wbr>PAPER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^150$|^(?:\d|[1-9]\d|1[0-4]\d)(?:.5)?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L79">regexp/common.ts:79</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L83">regexp/common.ts:83</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4603,7 +4645,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">SUBNET_<wbr>MASK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:\d{1,2}|1\d\d|2[0-4]\d|25[0-5])(?:\.(?:\d{1,2}|1\d\d|2[0-4]\d|25[0-5])){3}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L58">regexp/common.ts:58</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L62">regexp/common.ts:62</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4618,7 +4660,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TEL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d{3}-\d{8}$|^\d{4}-\d{7}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L136">regexp/common.ts:136</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L140">regexp/common.ts:140</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4633,7 +4675,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">THUNDER_<wbr>LINK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^thunderx?:\/\/[a-zA-Z\d]+&#x3D;$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L49">regexp/common.ts:49</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L53">regexp/common.ts:53</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4648,7 +4690,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TIME_<wbr>12_<wbr>HOUR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L103">regexp/common.ts:103</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L107">regexp/common.ts:107</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4663,7 +4705,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TIME_<wbr>24_<wbr>HOUR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L100">regexp/common.ts:100</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L104">regexp/common.ts:104</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4678,7 +4720,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TRAIN_<wbr>TRIPS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[GCDZTSPKXLY1-9]\d{1,4}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L32">regexp/common.ts:32</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L36">regexp/common.ts:36</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4693,7 +4735,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">UNIFIED_<wbr>SOCIAL_<wbr>CREDIT_<wbr>CODE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L46">regexp/common.ts:46</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L50">regexp/common.ts:50</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4708,7 +4750,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">USERNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-zA-Z0-9_-]{4,16}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L181">regexp/common.ts:181</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L185">regexp/common.ts:185</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4723,7 +4765,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">VERSION_<wbr>NUMBER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^\d+(?:\.\d+){2}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L91">regexp/common.ts:91</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L95">regexp/common.ts:95</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4738,7 +4780,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">VIDEO_<wbr>LINK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^https?:\/\/(.+\/)+.+(\.(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4))$/i</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L94">regexp/common.ts:94</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L98">regexp/common.ts:98</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4753,7 +4795,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">WEBSITE_<wbr>URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^&#x3D;%&amp;:/~+#-]*[\w@?^&#x3D;%&amp;/~+#-])?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L43">regexp/common.ts:43</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L47">regexp/common.ts:47</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4768,7 +4810,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">WEBSITE_<wbr>URL_<wbr>WITH_<wbr>PORT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^((ht|f)tps?:\/\/)?[\w-]+(\.[\w-]+)+:\d{1,5}\/?$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L38">regexp/common.ts:38</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L42">regexp/common.ts:42</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4783,7 +4825,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">WECHAT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^[a-zA-Z][-_a-zA-Z0-9]{5,19}$/</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/regexp/common.ts#L160">regexp/common.ts:160</a></li>
+						<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/regexp/common.ts#L164">regexp/common.ts:164</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -4799,18 +4841,16 @@ img {
 				<a name="geturlparams" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Url<wbr>Params</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Params<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Url<wbr>Params<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L3">utils/common.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L3">utils/common.ts:3</a></li>
 							</ul>
 						</aside>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{}</span></h4>
-						<ul class="tsd-parameters">
-						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -4824,7 +4864,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L133">utils/common.ts:133</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L133">utils/common.ts:133</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4852,7 +4892,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L258">utils/common.ts:258</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L258">utils/common.ts:258</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4880,7 +4920,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L278">utils/common.ts:278</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L278">utils/common.ts:278</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4908,7 +4948,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L198">utils/common.ts:198</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L198">utils/common.ts:198</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4936,7 +4976,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L183">utils/common.ts:183</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L183">utils/common.ts:183</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4964,7 +5004,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L298">utils/common.ts:298</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L298">utils/common.ts:298</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4992,12 +5032,40 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L4">utils/chinaMobilePhoneNumber.ts:4</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L4">utils/chinaMobilePhoneNumber.ts:4</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>匹配所有号码（手机卡 + 数据卡 + 上网卡）</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>mobile: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="ischinamobilebroadcastnetwork" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>China<wbr>Mobile<wbr>Broadcast<wbr>Network</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">is<wbr>China<wbr>Mobile<wbr>Broadcast<wbr>Network<span class="tsd-signature-symbol">(</span>mobile<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L34">utils/chinaMobilePhoneNumber.ts:34</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>匹配中国广电</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -5020,7 +5088,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L19">utils/chinaMobilePhoneNumber.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L19">utils/chinaMobilePhoneNumber.ts:19</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5048,7 +5116,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L29">utils/chinaMobilePhoneNumber.ts:29</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L29">utils/chinaMobilePhoneNumber.ts:29</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5076,7 +5144,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L24">utils/chinaMobilePhoneNumber.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L24">utils/chinaMobilePhoneNumber.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5104,7 +5172,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L84">utils/chinaMobilePhoneNumber.ts:84</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L89">utils/chinaMobilePhoneNumber.ts:89</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5132,7 +5200,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L89">utils/chinaMobilePhoneNumber.ts:89</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L94">utils/chinaMobilePhoneNumber.ts:94</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5160,7 +5228,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L99">utils/chinaMobilePhoneNumber.ts:99</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L104">utils/chinaMobilePhoneNumber.ts:104</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5188,7 +5256,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L94">utils/chinaMobilePhoneNumber.ts:94</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L99">utils/chinaMobilePhoneNumber.ts:99</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5216,7 +5284,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L34">utils/chinaMobilePhoneNumber.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L39">utils/chinaMobilePhoneNumber.ts:39</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5244,7 +5312,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L64">utils/chinaMobilePhoneNumber.ts:64</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L69">utils/chinaMobilePhoneNumber.ts:69</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5272,7 +5340,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L69">utils/chinaMobilePhoneNumber.ts:69</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L74">utils/chinaMobilePhoneNumber.ts:74</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5300,7 +5368,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L79">utils/chinaMobilePhoneNumber.ts:79</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L84">utils/chinaMobilePhoneNumber.ts:84</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5328,7 +5396,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L74">utils/chinaMobilePhoneNumber.ts:74</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L79">utils/chinaMobilePhoneNumber.ts:79</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5356,7 +5424,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L39">utils/chinaMobilePhoneNumber.ts:39</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L44">utils/chinaMobilePhoneNumber.ts:44</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5384,7 +5452,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L44">utils/chinaMobilePhoneNumber.ts:44</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L49">utils/chinaMobilePhoneNumber.ts:49</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5412,7 +5480,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L49">utils/chinaMobilePhoneNumber.ts:49</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L54">utils/chinaMobilePhoneNumber.ts:54</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5440,7 +5508,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L59">utils/chinaMobilePhoneNumber.ts:59</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L64">utils/chinaMobilePhoneNumber.ts:64</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5468,7 +5536,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L54">utils/chinaMobilePhoneNumber.ts:54</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L59">utils/chinaMobilePhoneNumber.ts:59</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5496,7 +5564,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L14">utils/chinaMobilePhoneNumber.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L14">utils/chinaMobilePhoneNumber.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5524,7 +5592,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/chinaMobilePhoneNumber.ts#L9">utils/chinaMobilePhoneNumber.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/chinaMobilePhoneNumber.ts#L9">utils/chinaMobilePhoneNumber.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5552,7 +5620,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L283">utils/common.ts:283</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L283">utils/common.ts:283</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5580,7 +5648,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L263">utils/common.ts:263</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L263">utils/common.ts:263</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5608,7 +5676,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L203">utils/common.ts:203</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L203">utils/common.ts:203</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5636,7 +5704,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L193">utils/common.ts:193</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L193">utils/common.ts:193</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5664,7 +5732,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L188">utils/common.ts:188</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L188">utils/common.ts:188</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5692,7 +5760,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L228">utils/common.ts:228</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L228">utils/common.ts:228</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5720,7 +5788,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L43">utils/common.ts:43</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L43">utils/common.ts:43</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5748,7 +5816,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L93">utils/common.ts:93</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L93">utils/common.ts:93</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5776,7 +5844,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L13">utils/common.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L13">utils/common.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5804,7 +5872,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L288">utils/common.ts:288</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L288">utils/common.ts:288</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5832,7 +5900,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L208">utils/common.ts:208</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L208">utils/common.ts:208</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5860,7 +5928,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L113">utils/common.ts:113</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L113">utils/common.ts:113</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5888,7 +5956,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L123">utils/common.ts:123</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L123">utils/common.ts:123</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5916,7 +5984,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L118">utils/common.ts:118</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L118">utils/common.ts:118</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5944,7 +6012,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L128">utils/common.ts:128</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L128">utils/common.ts:128</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5972,7 +6040,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L143">utils/common.ts:143</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L143">utils/common.ts:143</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6000,7 +6068,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L148">utils/common.ts:148</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L148">utils/common.ts:148</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6028,7 +6096,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L323">utils/common.ts:323</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L323">utils/common.ts:323</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6056,7 +6124,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L108">utils/common.ts:108</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L108">utils/common.ts:108</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6084,7 +6152,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L248">utils/common.ts:248</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L248">utils/common.ts:248</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6112,7 +6180,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L238">utils/common.ts:238</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L238">utils/common.ts:238</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6140,7 +6208,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L243">utils/common.ts:243</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L243">utils/common.ts:243</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6168,7 +6236,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L313">utils/common.ts:313</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L313">utils/common.ts:313</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6196,7 +6264,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L318">utils/common.ts:318</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L318">utils/common.ts:318</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6224,7 +6292,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L168">utils/common.ts:168</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L168">utils/common.ts:168</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6252,7 +6320,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L28">utils/common.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L28">utils/common.ts:28</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6280,7 +6348,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L58">utils/common.ts:58</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L58">utils/common.ts:58</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6308,7 +6376,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L338">utils/common.ts:338</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L338">utils/common.ts:338</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6336,7 +6404,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L293">utils/common.ts:293</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L293">utils/common.ts:293</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6364,7 +6432,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L343">utils/common.ts:343</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L343">utils/common.ts:343</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6392,7 +6460,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L153">utils/common.ts:153</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L153">utils/common.ts:153</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6420,7 +6488,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L98">utils/common.ts:98</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L98">utils/common.ts:98</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6448,7 +6516,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L38">utils/common.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L38">utils/common.ts:38</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6476,7 +6544,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L23">utils/common.ts:23</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L23">utils/common.ts:23</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6504,7 +6572,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L53">utils/common.ts:53</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L53">utils/common.ts:53</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6532,7 +6600,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L213">utils/common.ts:213</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L213">utils/common.ts:213</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6560,7 +6628,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L333">utils/common.ts:333</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L333">utils/common.ts:333</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6588,7 +6656,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L218">utils/common.ts:218</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L218">utils/common.ts:218</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6616,7 +6684,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L253">utils/common.ts:253</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L253">utils/common.ts:253</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6644,7 +6712,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L303">utils/common.ts:303</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L303">utils/common.ts:303</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6672,7 +6740,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L68">utils/common.ts:68</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L68">utils/common.ts:68</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6700,7 +6768,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L223">utils/common.ts:223</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L223">utils/common.ts:223</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6728,7 +6796,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L33">utils/common.ts:33</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L33">utils/common.ts:33</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6756,7 +6824,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L18">utils/common.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L18">utils/common.ts:18</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6784,7 +6852,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L48">utils/common.ts:48</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L48">utils/common.ts:48</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6812,7 +6880,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L328">utils/common.ts:328</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L328">utils/common.ts:328</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6840,7 +6908,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L268">utils/common.ts:268</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L268">utils/common.ts:268</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6868,7 +6936,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L138">utils/common.ts:138</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L138">utils/common.ts:138</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6896,7 +6964,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L103">utils/common.ts:103</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L103">utils/common.ts:103</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6924,7 +6992,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L233">utils/common.ts:233</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L233">utils/common.ts:233</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6952,7 +7020,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L88">utils/common.ts:88</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L88">utils/common.ts:88</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -6980,7 +7048,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L178">utils/common.ts:178</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L178">utils/common.ts:178</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7008,7 +7076,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L173">utils/common.ts:173</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L173">utils/common.ts:173</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7036,7 +7104,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L63">utils/common.ts:63</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L63">utils/common.ts:63</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7064,7 +7132,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L83">utils/common.ts:83</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L83">utils/common.ts:83</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7092,7 +7160,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L308">utils/common.ts:308</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L308">utils/common.ts:308</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7120,7 +7188,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L158">utils/common.ts:158</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L158">utils/common.ts:158</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7148,7 +7216,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L163">utils/common.ts:163</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L163">utils/common.ts:163</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7176,7 +7244,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L273">utils/common.ts:273</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L273">utils/common.ts:273</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7204,7 +7272,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L78">utils/common.ts:78</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L78">utils/common.ts:78</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -7232,7 +7300,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/6bec359/src/utils/common.ts#L73">utils/common.ts:73</a></li>
+								<li>Defined in <a href="https://github.com/fe-useful-tools/useful-regexp/blob/22d0fcb/src/utils/common.ts#L73">utils/common.ts:73</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

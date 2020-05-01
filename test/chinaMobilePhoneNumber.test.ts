@@ -61,6 +61,12 @@ run(
 );
 
 run(
+  regexp.isChinaMobileBroadcastNetwork,
+  mockDataValid.carrier.broadcast_network,
+  mockDataInvalid.carrier.broadcast_network
+);
+
+run(
   regexp.isChinaMobileINMARSAT,
   mockDataValid.carrier.inmarsat,
   mockDataInvalid.carrier.inmarsat

@@ -2,11 +2,11 @@
   <h1 align="center"> USEFUL-REGEXP </h1>
 </p>
 <p align="center">
-  <img alt="NPM" src="https://img.shields.io/npm/l/useful-regexp?style=flat-square">
-  <img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/fe-useful-tools/useful-regexp?style=flat-square">
-  <img alt="Travis (.org)" src="https://img.shields.io/travis/fe-useful-tools/useful-regexp?style=flat-square">
+  <img alt="license" src="https://img.shields.io/npm/l/useful-regexp?style=flat-square">
+  <img alt="releases" src="https://badgen.net/github/releases/fe-useful-tools/useful-regexp?style=flat-square">
   <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/fe-useful-tools/useful-regexp?style=flat-square&colorB=51C838">
-  <img alt="npm" src="https://img.shields.io/npm/dt/useful-regexp?style=flat-square">
+  <img alt="downloads" src="https://img.shields.io/npm/dt/useful-regexp?style=flat-square">
+  <img alt="pkg dependents" src="https://badgen.net/github/dependents-pkg/fe-useful-tools/useful-regexp?style=flat-square">
   <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/useful-regexp?style=flat-square">
 </p>
 
@@ -73,3 +73,7 @@ const name = '喜塔腊·尔晴';
 
 const isChinese = isChineseName(name);
 ```
+
+## :rocket: Download
+
+Download the latest version of useful-regexp at https://github.com/fe-useful-tools/useful-regexp/releases

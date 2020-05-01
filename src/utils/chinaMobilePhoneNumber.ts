@@ -30,6 +30,11 @@ export const isChinaMobileCTCC = (mobile: string): boolean => (
   Reg.MOBILE_CTCC.test(mobile)
 );
 
+/** 匹配中国广电 */
+export const isChinaMobileBroadcastNetwork = (mobile: string) => (
+  Reg.MOBILE_BROADCAST_NETWORK.test(mobile)
+);
+
 /** 匹配北京船舶通信导航有限公司（海事卫星通信） */
 export const isChinaMobileINMARSAT = (mobile: string): boolean => (
   Reg.MOBILE_INMARSAT.test(mobile)
