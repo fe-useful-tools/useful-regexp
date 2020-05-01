@@ -1,8 +1,8 @@
 {
   "name": "useful-regexp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Useful regex patterns and functions for easier programming",
-  "main": "lib/index.esm.js",
+  "main": "lib/index.min.js",
   "commonjs": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "browser": "lib/index.min.js",
@@ -51,7 +51,12 @@
     "url": "git+https://github.com/fe-useful-tools/useful-regexp.git"
   },
   "keywords": [
-    "regex"
+    "regex",
+    "regexp",
+    "regular",
+    "express",
+    "expression",
+    "pattern"
   ],
   "author": "kingmui<muikinghk@yahoo.com.hk>",
   "license": "MIT",
@@ -59,7 +64,6 @@
     "url": "https://github.com/fe-useful-tools/useful-regexp/issues"
   },
   "homepage": "https://fe-useful-tools.github.io/useful-regexp/",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
